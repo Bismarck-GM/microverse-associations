@@ -23,7 +23,8 @@ default: &default
 
 development:
   <<: *default
-  database: private_events_development
+  database: microverse_associations
+  username: microverse_associations
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
