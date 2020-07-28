@@ -1,0 +1,25 @@
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<div>
+
+  <%= @user.name %>
+
+</div>
+
+<p>Upcoming Events</p>
+<% @upcoming_events.each do |event| %>
+  <%= event.date.strftime('%d %B %Y') %>
+  <br/>
+<% end %>
+
+<div>
+  <p>Previous Events</p>
+  <% @prev_events.each do |event|%>
+    <%= event.date.strftime('%d %B %Y') %>
+    <br/>
+  <% end %>
+</div>

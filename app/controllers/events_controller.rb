@@ -1,9 +1,12 @@
 class EventsController < ApplicationController
-  before_action :check_login, only: [:new]
+  before_action :check_login, only: [:new, :create, :attend]
   
   def index
     @events = Event.includes(:attendees).all
     @event = Event.new
+    @prev_events = Event.past
+    @upcoming_events = Event.upcoming
+
   end
 
   def show
@@ -11,8 +14,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @events = current_user.events.create(events_params)
-    redirect_to events_path, notice: "Event created succesfully"
+    @event = current_user.events.create(events_params)
+    redirect_to @event, notice: "Event created succesfully"
   end
 
   def attend
@@ -28,6 +31,6 @@ class EventsController < ApplicationController
   private
 
   def events_params
-    params.require(:event).permit(:location, :date, :description)
+    params.require(:event).permit(:location, :date, :description, :name)
   end
 end

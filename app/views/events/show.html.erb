@@ -1,1 +1,17 @@
-<%= @event %>
+
+<div> <h1> <%= @event.name %> </h1> </div>
+<div> <h3> <%= @event.location %> </h3> </div>
+<div> 
+  <h5> 
+    <%= @event.description %> <br/>
+    <%= @event.date.strftime('%d %B %Y') %>
+  </h5> 
+</div>
+
+<br/>
+<div>
+  <h3>Attendees</h3>
+  <%= @event.attendees.pluck('name').join(', ') %>
+</div>
+<br/>
+<%= link_to "Attend", attend_event_path, method: :post %>

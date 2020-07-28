@@ -4,11 +4,16 @@
   </div>
 <% end %>
 
-<div>This are events</div>
+<h3> Upcoming Events </h3>
+<%= render @upcoming_events %>
 
-<%= render @events %>
+<h3> Past events </h3>
+<%= render @prev_events %>
 
 <%= form_for @event, url: events_path do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
   <%= f.label :location %>
   <%= f.text_field :location %>

@@ -6,11 +6,14 @@ class UsersController < ApplicationController
   
   def create
     @user = User.create(user_params)
-    redirect_to new_user_path
+    session[:current_user_id] = @user.id
+    redirect_to events_path
   end
   
   def show
     @user = User.find(params[:id])
+    @prev_events = Event.past
+    @upcoming_events = Event.upcoming
   end
 
   private
