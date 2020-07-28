@@ -1,15 +1,18 @@
 class EventsController < ApplicationController
   before_action :check_login, only: [:new]
+  
   def index
-    @events = Event.all
+    @events = Event.includes(:attendees).all
+    @event = Event.new
   end
 
-  def new
-    @events = Event.new
+  def show
+    @event = Event.find(params[:id])
   end
 
   def create
-    @events = Event.create(events_params)
+    @events = current_user.events.create(events_params)
+    redirect_to events_path, notice: "Event created succesfully"
   end
 
   def attend
@@ -22,9 +25,6 @@ class EventsController < ApplicationController
     end
   end
 
-  def show
-    
-  end
   private
 
   def events_params

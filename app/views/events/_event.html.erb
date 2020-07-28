@@ -1,3 +1,10 @@
 <div> <h1> <%= event.location %> </h1> </div>
 <div> <h5> <%= event.description %> </h5> </div>
+<div> 
+  <h5> 
+    <% event.attendees.pluck('name').join(', ') %>
+  </h5> 
+</div>
+
+
 <%= link_to "Attend", attend_event_path(event.id), method: :post %>
