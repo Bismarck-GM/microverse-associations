@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
     
     unless @user.nil?
       session[:current_user_id] = @user.id
-
+      redirect_to events_path
     else
-      redirect_to new_session_path 
+      redirect_to new_session_path, notice: "User not found."
     end
 
   end
