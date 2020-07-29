@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_user
+
 
   protected
 
@@ -7,6 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def check_login
-    redirect_to new_session_path, notice: "Must be logged in" if session[:current_user_id].nil? 
+    redirect_to new_session_path, notice: "Must be logged in" if session[:current_user_id].nil?
   end
 end

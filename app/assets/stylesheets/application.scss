@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    background-color: #C0C0C0;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button > a {
+    text-decoration: none;
+    color: #222;
+}
+
+.floating-middle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 300px;
+}
+
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex { display: flex; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+
+.mt-1 { margin-top: 3px; }
+.mt-2 { margin-top: 6px; }
+.mt-3 { margin-top: 12px; }
+
+ul.custom-list {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+}
+.text {
+    font-size: 18px;
+}
+.mt-4 { margin-top: 24px; }
+.mt-5 { margin-top: 48px; }
+
+.mr-1 { margin-right: 3px; }
+.mr-2 { margin-right: 6px; }
+.mr-3 { margin-right: 12px; }
+.mr-4 { margin-right: 24px; }
+.mr-5 { margin-right: 48px; }
+
+
+.mx-1 { margin-right: 3px; margin-left: 3px; }
+.mx-2 { margin-right: 6px; margin-left: 6px; }
+.mx-3 { margin-right: 12px; margin-left: 12px; }
+.mx-4 { margin-right: 24px; margin-left: 24px; }
+.mx-5 { margin-right: 48px; margin-left: 48px; }
+
+.ml-1 { margin-left: 3px; }
+.ml-2 { margin-left: 6px; }
+.ml-3 { margin-left: 12px; }
+.ml-4 { margin-left: 24px; }
+.ml-5 { margin-left: 48px; }

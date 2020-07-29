@@ -8,4 +8,16 @@ class Event < ApplicationRecord
   scope :past, -> { where("date < ?", Time.now) }
   scope :upcoming, -> { where("date > ?", Time.now) }
 
+
+  validates :name, presence: true, length: { minimum: 3, maximum: 255 }
+  validates :location, presence: true, length: { minimum: 3, maximum: 255 }
+  validates :description, presence: true, length: { minimum: 3 }
+  validates :date, presence: true
+  validate :date_is_in_future
+
+  def date_is_in_future
+    if date && date < Time.now
+      errors.add(:date, "cannot be in the past.")
+    end
+  end
 end

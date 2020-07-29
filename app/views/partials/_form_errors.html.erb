@@ -1,0 +1,26 @@
+<% if resource.errors.any? %>
+  <div class="window-outer floating-middle flex justify-center align-center">
+    <div class="error-outer row center-xs middle-xs mt-5">
+      <div class="col-xs-12">
+        <div class="window">
+          <div class="title-bar">
+            <div class="title-bar-text">Boo-yaaaaaaaaaa</div>
+          </div>
+          <div class="window-body text-left">
+            <div class="flex align-start justify-start">
+              <%= image_tag 'https://win98icons.alexmeub.com/icons/png/msg_error-0.png' %>
+              <ul>
+                <% resource.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+            <div class="flex justify-end">
+              <button class="close-window">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

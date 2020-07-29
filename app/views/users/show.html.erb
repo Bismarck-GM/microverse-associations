@@ -1,25 +1,29 @@
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info">
-    <%= msg %>
-  </div>
-<% end %>
-
-<div>
-
+<h1>
+  <%= image_tag 'https://win98icons.alexmeub.com/icons/png/msie1-2.png', class: 'mr-3' %>
   <%= @user.name %>
+</h1>
 
-</div>
-
-<p>Upcoming Events</p>
-<% @upcoming_events.each do |event| %>
-  <%= event.date.strftime('%d %B %Y') %>
+<div class="mx-4">
+  <h3 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/time_and_date-0.png', class: 'mr-3' %>
+    Upcoming Events
+  </h3>
+  <ul class="custom-list">
+    <%= render @upcoming_events %>
+  </ul>
   <br/>
-<% end %>
-
-<div>
-  <p>Previous Events</p>
-  <% @prev_events.each do |event|%>
-    <%= event.date.strftime('%d %B %Y') %>
-    <br/>
-  <% end %>
+  <br/>
+  <h3>
+      <%= image_tag 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full_cool-5.png
+  ', class: 'mr-3' %>
+    Past events
+  </h3>
+  <ul class="custom-list">
+    <%= render @prev_events %>
+  </ul>
+  <div class="flex justify-end mt-5">
+    <%= link_to root_path do %>
+      <button>Go home</button>
+    <% end %>
+  </div>
 </div>
