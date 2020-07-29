@@ -1,4 +1,5 @@
 
+
 <div> <h1> <%= @event.name %> </h1> </div>
 <div> <h3> <%= @event.location %> </h3> </div>
 <div> 
@@ -13,5 +14,20 @@
   <h3>Attendees</h3>
   <%= @event.attendees.pluck('name').join(', ') %>
 </div>
+<br/>
+
+  <%= form_with(url: invite_to_event_path, method: "post") do %>
+
+    <%= label_tag("user_name", "Username to Invite") %>
+    <%= text_field_tag("user[name]") %>
+    <%= submit_tag("Invite") %>
+
+  <% end %>
+  <br/>
+  <% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
 <br/>
 <%= link_to "Attend", attend_event_path, method: :post %>
