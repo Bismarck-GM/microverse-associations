@@ -15,32 +15,31 @@
  */
 
 body {
-    background-color: #C0C0C0;
-    min-height: 100vh;
-    margin: 0;
+  background-color: #c0c0c0;
+  min-height: 100vh;
+  margin: 0;
 }
 
 button > a {
-    text-decoration: none;
-    color: #222;
+  text-decoration: none;
+  color: #222;
 }
 
 .floating-middle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 300px;
 }
 
-
 .h-100 {
-    height: 100%;
+  height: 100%;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .flex { display: flex; }
@@ -53,21 +52,21 @@ button > a {
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 
-
 .mt-1 { margin-top: 3px; }
 .mt-2 { margin-top: 6px; }
 .mt-3 { margin-top: 12px; }
 
 ul.custom-list {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
+
 .text {
-    font-size: 18px;
+  font-size: 18px;
 }
 .mt-4 { margin-top: 24px; }
 .mt-5 { margin-top: 48px; }
@@ -78,15 +77,38 @@ textarea {
 .mr-4 { margin-right: 24px; }
 .mr-5 { margin-right: 48px; }
 
+.mx-1 {
+  margin-right: 3px;
+  margin-left: 3px;
+}
 
-.mx-1 { margin-right: 3px; margin-left: 3px; }
-.mx-2 { margin-right: 6px; margin-left: 6px; }
-.mx-3 { margin-right: 12px; margin-left: 12px; }
-.mx-4 { margin-right: 24px; margin-left: 24px; }
-.mx-5 { margin-right: 48px; margin-left: 48px; }
+.mx-2 {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.mx-3 {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.mx-4 {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.mx-5 {
+  margin-right: 48px;
+  margin-left: 48px;
+}
 
 .ml-1 { margin-left: 3px; }
 .ml-2 { margin-left: 6px; }
 .ml-3 { margin-left: 12px; }
 .ml-4 { margin-left: 24px; }
 .ml-5 { margin-left: 48px; }
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}

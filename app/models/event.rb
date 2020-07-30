@@ -1,13 +1,12 @@
 class Event < ApplicationRecord
   belongs_to :creator, class_name: User.name, foreign_key: 'user_id'
   has_many :event_users
-  has_many :attendees, :through => :event_users, :source => :attendee
+  has_many :attendees, through: :event_users, source: :attendee
   has_many :invite_users
-  has_many :invited_users, :through => :invite_users, :source => :invited_user
+  has_many :invited_users, through: :invite_users, source: :invited_user
 
-  scope :past, -> { where("date < ?", Time.now) }
-  scope :upcoming, -> { where("date > ?", Time.now) }
-
+  scope :past, -> { where('date < ?', Time.now) }
+  scope :upcoming, -> { where('date > ?', Time.now) }
 
   validates :name, presence: true, length: { minimum: 3, maximum: 255 }
   validates :location, presence: true, length: { minimum: 3, maximum: 255 }
@@ -16,8 +15,6 @@ class Event < ApplicationRecord
   validate :date_is_in_future
 
   def date_is_in_future
-    if date && date < Time.now
-      errors.add(:date, "cannot be in the past.")
-    end
+    errors.add(:date, 'cannot be in the past.') if date && date < Time.now
   end
 end
