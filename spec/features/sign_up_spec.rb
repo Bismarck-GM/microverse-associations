@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Sign Up', type: :feature  do
-
+RSpec.describe 'Sign Up', type: :feature do
   let(:user) { User.create name: 'fry' }
 
   scenario 'Sign Up' do
@@ -14,7 +13,6 @@ RSpec.describe 'Sign Up', type: :feature  do
     sleep(1)
 
     expect(page).to have_current_path(events_path)
-    
   end
 
   scenario 'User already exists' do

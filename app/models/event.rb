@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   has_many :invited_users, through: :invite_users, source: :invited_user
 
   scope :past, -> { where('date < ?', Time.now) }
-  scope :upcoming, -> { where('date > ?', Time.now) }
+  scope :upcoming, -> { where('date >= ?', Time.now) }
 
   validates :name, presence: true, length: { minimum: 3, maximum: 255 }
   validates :location, presence: true, length: { minimum: 3, maximum: 255 }

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     if @event.save
       @event.attendees << current_user
       @event.invited_users << current_user
-      redirect_to @event, notice: 'Event created succesfully'
+      redirect_to @event, notice: 'Event created successfully'
     else
       set_events
       render 'index'
