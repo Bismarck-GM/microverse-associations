@@ -15,7 +15,7 @@
         <div class="title-bar-controls">
           <% if user_logged_in %>
             <%= link_to destroy_session_path, method: :delete do %>
-              <button aria-label="Close"></button>
+              <button aria-label="Close" id='logout'></button>
             <% end %>
           <% end %>
         </div>

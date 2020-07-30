@@ -8,6 +8,10 @@ Rails.application.configure do
 
   config.cache_classes = false
   config.action_view.cache_template_loading = true
+  config.hosts << "127.0.0.1"
+  config.hosts << 'rails.test'
+  # config.hosts << 'www.example.com'
+  # config.action_controller.default_url_options = {host: '127.0.0.1'}
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
