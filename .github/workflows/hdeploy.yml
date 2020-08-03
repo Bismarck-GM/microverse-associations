@@ -1,11 +1,6 @@
 name: Deploy to Heroku
 
-on:
-  push:
-    branches:
-        - feature/members-club
-        - develop
-        - master
+on: push
 
 jobs:
   build:
