@@ -4,7 +4,15 @@ require './spec/support/authentication_helper'
 RSpec.describe 'Attend button action', type: :feature do
   include AuthenticationHelper
   let!(:user) { User.create name: 'bender' }
-  let(:event) { Event.create name: 'Cheese', description: 'More Cheese', location: 'Cheese', date: Date.tomorrow, user_id: user.id }
+  let(:event) do
+    Event.create({
+                   name: 'Cheese',
+                   description: 'More Cheese',
+                   location: 'Cheese',
+                   date: Date.tomorrow,
+                   user_id: user.id
+                 })
+  end
 
   scenario 'Returns error if user is not invited', js: true do
     login_user

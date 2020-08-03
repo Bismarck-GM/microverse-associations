@@ -4,7 +4,15 @@ require './spec/support/authentication_helper'
 RSpec.describe 'Show events', type: :feature do
   include AuthenticationHelper
   let!(:user) { User.create name: 'bender' }
-  let(:event) { Event.create name: 'Cheese', description: 'More Cheese', location: 'Cheese', date: Date.tomorrow, user_id: user.id }
+  let(:event) do
+    Event.create({
+                   name: 'Cheese',
+                   description: 'More Cheese',
+                   location: 'Cheese',
+                   date: Date.tomorrow,
+                   user_id: user.id
+                 })
+  end
 
   scenario 'Does not allow unauthenticated users to access to individual events' do
     visit event_path(event.id)
