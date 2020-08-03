@@ -1,6 +1,6 @@
 # Associations
 
-![Heroku Deployment](https://github.com/WinterCore/microverse-members-club/workflows/Deploy%20to%20Heroku/badge.svg?branch=development)
+![Heroku Deployment](https://github.com/Bismarck-GM/microverse-associations/workflows/Deploy%20to%20Heroku/badge.svg?branch=development)
 
 <br />
 <p align="center">
@@ -33,7 +33,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://members-club.upperdown.me)
+[Live Demo Link](https://naked-event-manager.herokuapp.com/)
 
 
 <!-- INSTALLATION -->
