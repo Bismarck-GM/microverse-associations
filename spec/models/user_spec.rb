@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'associations' do
-    it { should have_many(:events) }
+    it { should have_many(:events).with_foreign_key(:creator_id) }
     it { should have_many(:event_users) }
     it { should have_many(:invite_users) }
     it { should have_many(:appointments).through(:event_users).source(:attended_event) }

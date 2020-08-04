@@ -14,7 +14,7 @@ RSpec.describe 'Show Users', type: :feature do
                            description: 'More Cheese',
                            location: 'Cheese',
                            date: Date.tomorrow,
-                           user_id: user.id
+                           creator_id: user.id
                          })
     event.attendees << user
     visit user_path(user.id)
@@ -27,7 +27,7 @@ RSpec.describe 'Show Users', type: :feature do
                         description: 'More Cheese',
                         location: 'Cheese',
                         date: Date.yesterday,
-                        user_id: user.id
+                        creator_id: user.id
                       })
     event.save(validate: false)
     event.attendees << user

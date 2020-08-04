@@ -10,7 +10,7 @@ RSpec.describe 'Invite Event form', type: :feature do
                    description: 'More Cheese',
                    location: 'Cheese',
                    date: Date.tomorrow,
-                   user_id: user.id
+                   creator_id: user.id
                  })
   end
 

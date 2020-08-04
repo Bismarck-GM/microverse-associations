@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   describe 'associations' do
-    it { should belong_to(:creator).class_name(User.name).with_foreign_key(:user_id) }
+    it { should belong_to(:creator).class_name(User.name) }
     it { should have_many(:event_users) }
     it { should have_many(:attendees).through(:event_users).source(:attendee) }
     it { should have_many(:invite_users) }
@@ -16,7 +16,7 @@ RSpec.describe Event, type: :model do
                      location: 'foobar',
                      description: 'lorem ipsum dolor sit amet',
                      date: Date.tomorrow,
-                     user_id: 1
+                     creator_id: 1
                    })
     end
 
