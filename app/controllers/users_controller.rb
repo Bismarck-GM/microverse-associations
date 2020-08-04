@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :check_login, only: %[invites]
+
   def index
     @users = User.all
   end

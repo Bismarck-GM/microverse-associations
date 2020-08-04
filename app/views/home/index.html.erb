@@ -8,7 +8,8 @@
         <h3>Welcome to the naked 98 event manager.</h3>
         <h4><%= link_to 'Events', events_path %></h4>
         <h4><%= link_to 'Users', users_path %></h4>
-        <h4><%= link_to 'Invites', user_invites_path %></h4>
+
+        <h4><%= render_user_invites_link %></h4>
         <div class="flex justify-end">
           <%= link_to new_session_path do %>
             <button>Login</button>

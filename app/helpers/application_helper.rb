@@ -13,11 +13,15 @@ module ApplicationHelper
     end
   end
 
-  def render_logout_link()
+  def render_logout_link
     return unless user_logged_in
 
     link_to destroy_session_path, method: :delete do
       "<button aria-label=\"Close\" id='logout'></button>".html_safe
     end
+  end
+
+  def render_user_invites_link
+    link_to 'Invites', user_invites_path if user_logged_in
   end
 end
