@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :events
+  has_many :events, foreign_key: :creator_id
   has_many :event_users
   has_many :invite_users
   has_many :appointments, through: :event_users, source: :attended_event

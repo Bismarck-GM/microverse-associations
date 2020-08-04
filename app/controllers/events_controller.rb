@@ -72,7 +72,7 @@ class EventsController < ApplicationController
   end
 
   def authorize_owner
-    return true if current_user.id == @event.user_id
+    return true if current_user.id == @event.creator_id
 
     flash[:error] = 'I thought we were friends 😢'
     redirect_to event_path(@event)

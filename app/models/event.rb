@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  belongs_to :creator, class_name: User.name, foreign_key: 'user_id'
+  belongs_to :creator, class_name: User.name
   has_many :event_users
   has_many :attendees, through: :event_users, source: :attendee
   has_many :invite_users
@@ -12,9 +12,4 @@ class Event < ApplicationRecord
   validates :location, presence: true, length: { minimum: 3, maximum: 255 }
   validates :description, presence: true, length: { minimum: 3 }
   validates :date, presence: true
-  validate :date_is_in_future
-
-  def date_is_in_future
-    errors.add(:date, 'cannot be in the past.') if date && date < Time.now
-  end
 end

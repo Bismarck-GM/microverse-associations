@@ -13,15 +13,12 @@
       <div class="title-bar">
         <div class="title-bar-text">An event manager from the future</div>
         <div class="title-bar-controls">
-          <% if user_logged_in %>
-            <%= link_to destroy_session_path, method: :delete do %>
-              <button aria-label="Close" id='logout'></button>
-            <% end %>
-          <% end %>
+        <%= render_logout_link %>
         </div>
       </div>
       <div class="window-body">
-        <%= render 'partials/flash_messages' %>
+        <%= render_flash(:error) %>
+        <%= render_flash(:notice) %>
         <%= yield %>
       </div>
     </div>
