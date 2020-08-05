@@ -1,0 +1,22 @@
+<%= render 'form' %>
+<div class="mx-4">
+  <h3 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/time_and_date-0.png', class: 'mr-3' %>
+    Upcoming Events
+  </h3>
+  <ul class="custom-list">
+    <%= render @upcoming_events %>
+  </ul>
+  <br/>
+  <br/>
+  <h3>
+      <%= image_tag 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full_cool-5.png
+  ', class: 'mr-3' %>
+    Past events
+  </h3>
+  <ul class="custom-list">
+    <%= render @prev_events %>
+  </ul>
+</div>
+
+<%= render 'partials/home_link' %>

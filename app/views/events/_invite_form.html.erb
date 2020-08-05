@@ -1,0 +1,24 @@
+<%= render_validation_errors(@event) %>
+<div class="row center-xs middle-xs mt-5">
+  <div class="col-md-6 col-sm-8 col-xs-12">
+    <div class="row start-xs">
+      <div class="window w-100">
+        <div class="title-bar">
+          <div class="title-bar-text">Internet explorer says hi</div>
+        </div>
+        <div class="window-body">
+          <h4>Invite new Attendee</h4>
+          <%= form_with(url: invite_to_event_path, method: "post") do %>
+            <div class="field-row-stacked">
+              <%= label_tag("user_name", "Username to Invite") %>
+              <%= text_field_tag("user[name]") %>
+            </div>
+            <div class="flex justify-end mt-3">
+              <button>Invite</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

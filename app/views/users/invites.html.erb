@@ -1,0 +1,14 @@
+
+
+<h2 class="flex align-center">
+  <%= image_tag 'https://win98icons.alexmeub.com/icons/png/accessibility-2.png', class: 'mr-3' %>
+  Events you've been invited to
+</h2>
+
+<ul class="custom-list">
+  <% @invites.each do |invite| %>
+    <%= render 'events/event', event: invite %>
+  <% end %>
+</ul>
+
+<%= render 'partials/home_link' %>

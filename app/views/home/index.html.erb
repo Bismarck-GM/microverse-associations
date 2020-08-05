@@ -1,0 +1,24 @@
+<div class="row center-xs middle-xs mt-5">
+  <div class="col-md-6 col-sm-8 col-xs-12">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Welcome naked partners</div>
+      </div>
+      <div class="window-body">
+        <h3>Welcome to the naked 98 event manager.</h3>
+        <h4><%= link_to 'Events', events_path %></h4>
+        <h4><%= link_to 'Users', users_path %></h4>
+
+        <h4><%= render_user_invites_link %></h4>
+        <div class="flex justify-end">
+          <%= link_to new_session_path do %>
+            <button>Login</button>
+          <% end %>
+          <%= link_to new_user_path do %>
+            <button>Signup</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

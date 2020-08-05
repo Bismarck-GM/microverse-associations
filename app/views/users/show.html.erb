@@ -1,0 +1,58 @@
+<h1>
+  <%= image_tag 'https://win98icons.alexmeub.com/icons/png/msie1-2.png', class: 'mr-3' %>
+  <%= @user.name %>
+</h1>
+
+<div class="mx-4">
+
+  <h3 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/netshow-2.png', class: 'mr-3' %>
+    Events created by this user
+  </h3>
+  <div class="ml-5">
+    <h4 class="flex align-center">
+      <%= image_tag 'https://win98icons.alexmeub.com/icons/png/time_and_date-0.png', class: 'mr-3' %>
+      Upcoming Events
+    </h4>
+    <ul class="custom-list">
+      <%= render @upcoming_created_events %>
+    </ul>
+    <br/>
+    <h4>
+        <%= image_tag 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full_cool-5.png
+    ', class: 'mr-3' %>
+      Past events
+    </h4>
+    <ul class="custom-list">
+      <%= render @prev_created_events %>
+    </ul>
+  </div>
+
+  <h3 class="flex align-center mt-5">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/clock-1.png', class: 'mr-3' %>
+    Events that this user will be attending
+  </h3>
+  <div class="ml-5">
+    <h4 class="flex align-center">
+      <%= image_tag 'https://win98icons.alexmeub.com/icons/png/time_and_date-0.png', class: 'mr-3' %>
+      Upcoming Events
+    </h4>
+    <ul class="custom-list">
+      <%= render @upcoming_created_events %>
+    </ul>
+    <br/>
+    <h4>
+        <%= image_tag 'https://win98icons.alexmeub.com/icons/png/recycle_bin_full_cool-5.png
+    ', class: 'mr-3' %>
+      Past events
+    </h4>
+    <ul class="custom-list">
+      <%= render @prev_created_events %>
+    </ul>
+  </div>
+  <div class="flex justify-end mt-5">
+    <%= link_to root_path do %>
+      <button>Go home</button>
+    <% end %>
+  </div>
+</div>

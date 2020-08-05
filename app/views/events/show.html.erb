@@ -1,0 +1,48 @@
+
+<div>
+  <h4 class="flex align-center justify-center text-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/calendar-2.png', class: 'mr-3' %>
+    <%= @event.date.strftime('%d %B %Y') %>
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/calendar-2.png', class: 'ml-3' %>
+  </h4>
+</div>
+
+<div>
+  <h2 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/desktop-2.png', class: 'mr-4' %>
+    <%= @event.name %>
+  </h1>
+</div>
+<div>
+  <h4 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/world-3.png', class: 'mr-3' %>
+    Location: <%= @event.location %>
+  </h4>
+</div>
+<div>
+  <p class="text">
+    <%= @event.description %> <br/>
+  </p>
+</div>
+
+<br/>
+<div>
+  <h4>Attendees</h4>
+  <p class="text">
+    <% @event.attendees.each_with_index do |attendee, i| %>
+      <%= i == 0 ? '' : ', ' %><%= link_to attendee.name, attendee %>
+    <% end %>
+  </p>
+</div>
+<br/>
+<%= render_invite_form(@event) %>
+
+
+<div class="flex justify-end mt-5">
+  <%= link_to events_path, class: 'mr-2' do %>
+    <button>Go back to all events</button>
+  <% end %>
+  <%= link_to attend_event_path, method: :post do %>
+    <button>Attend</button>
+  <% end %>
+</div>

@@ -1,22 +1,22 @@
-# Members only club
+# Associations
 
-![Heroku Deployment](https://github.com/WinterCore/microverse-members-club/workflows/Deploy%20to%20Heroku/badge.svg?branch=development)
+![Heroku Deployment](https://github.com/Bismarck-GM/microverse-associations/workflows/Deploy%20to%20Heroku/badge.svg?branch=development)
 
 <br />
 <p align="center">
-  <a href="https://github.com/WinterCore/microverse-members-club">
+  <a href="https://github.com/Bismarck-GM/microverse-associations">
     <img src="rails-image.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Light Twitter Clone</h3>
+  <h3 align="center">Event Manager</h3>
 
   <p align="center">
-    This project is a website for an exclusive clubhouse where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
+    In this project, we build an application named Private Events that behaves similar to Eventbrite. Using the main concepts of Associations of Rails.
     <br />
     <br />
-    <a href="https://github.com/WinterCore/microverse-members-club/issues">Report Bug</a>
+    <a href="https://github.com/Bismarck-GM/microverse-associations/issues">Report Bug</a>
     ·
-    <a href="https://github.com/WinterCore/microverse-members-club/issues">Request Feature</a>
+    <a href="https://github.com/Bismarck-GM/microverse-associations/issues">Request Feature</a>
   </p>
 </p>
 
@@ -33,7 +33,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://members-club.upperdown.me)
+[Live Demo Link](https://naked-event-manager.herokuapp.com/)
 
 
 <!-- INSTALLATION -->
@@ -41,14 +41,14 @@
 
 To have this app on your pc, you need to:
 * have Ruby & Ruby on Rails installed in your computer
-* [download](https://github.com/WinterCore/microverse-members-club/archive/development.zip) or clone this repo:
+* [download](https://github.com/Bismarck-GM/microverse-associations/archive/development.zip) or clone this repo:
   - Clone with SSH:
   ```
-    git@github.com:WinterCore/microverse-members-club.git
+    git@github.com:Bismarck-GM/microverse-associations.git
   ```
   - Clone with HTTPS
   ```
-    https://github.com/WinterCore/microverse-members-club.git
+    https://github.com/Bismarck-GM/microverse-associations.git
   ```
 * and open the terminal inside the repo and run the bundler
   - ```$ bundler install --without production```
@@ -62,7 +62,9 @@ To have this app on your pc, you need to:
 <!-- AUTOMATED TEST -->
 ### Automated Test
 
-> There are no Automated Test for this project yet
+We use RSpec and Capybara to perform tests.
+
+To run them just go to the root folder and use ```rspec```
 
 ## Authors
 

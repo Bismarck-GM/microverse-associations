@@ -1,0 +1,26 @@
+<%= render_validation_errors(@user) %>
+<div class="row center-xs middle-xs mt-5">
+  <div class="col-md-6 col-sm-8 col-xs-12">
+    <div class="row start-xs">
+      <div class="window w-100">
+        <div class="title-bar">
+          <div class="title-bar-text">Sup?</div>
+        </div>
+        <div class="window-body">
+          <h4>Signup today and you'll have a chance to bite bender's ass</h4>
+          <%= form_for @user do |f| %>
+            <div class="field-row">
+              <%= f.label :username %>
+              <%= f.text_field :name %>
+            </div>
+            <div class="flex justify-end">
+              <button>Signup</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'partials/home_link' %>

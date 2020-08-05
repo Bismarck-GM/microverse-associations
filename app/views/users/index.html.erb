@@ -1,0 +1,15 @@
+
+<div class="mx-4">
+  <h3 class="flex align-center">
+    <%= image_tag 'https://win98icons.alexmeub.com/icons/png/msagent-3.png', class: 'mr-3' %>
+    All the spies
+  </h3>
+  <ul class="custom-list">
+    <% @users.each do |user| %>
+      <li><%= link_to user.name, user %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<%= render 'partials/home_link' %>

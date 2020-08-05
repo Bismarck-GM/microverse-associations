@@ -1,0 +1,15 @@
+<div class="window-outer error-outer row center-xs middle-xs mt-5">
+  <div class="col-md-6 col-sm-8 col-xs-12">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">You broke something!</div>
+      </div>
+      <div class="window-body">
+        <p class="flex align-center">
+          <%= image_tag 'https://win98icons.alexmeub.com/icons/png/msg_error-0.png', class: 'mr-3' %>
+          <%= flash[:error] %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
